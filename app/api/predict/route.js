@@ -17,6 +17,8 @@ export async function POST(request) {
       data.pre
     )} ${Number(data.tmx)} ${Number(data.tmn)} ${Number(data.wind)}`;
 
+    console.log(data);
+
     return new Promise((resolve) => {
       exec(command, (error, stdout, stderr) => {
         if (error) {
@@ -32,7 +34,7 @@ export async function POST(request) {
         if (stderr) {
           console.error(`stderr: ${stderr}`);
         }
-        console.log({ ok: true, prediction: classes[stdout.trim() - 1] });
+        console.log({ ok: true, prediction: classes[stdout.trim() - 1] }, stdout);
         resolve(
           NextResponse.json({
             ok: true,

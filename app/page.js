@@ -3,7 +3,7 @@ import Button from './components/Button';
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-evenly items-center w-full h-full pb-8">
+    <main className="flex flex-col justify-evenly items-center w-full h-full pb-16">
       <p className="text-4xl font-bold">Aero-Prophesy</p>
 
       <div className=" w-5/6">

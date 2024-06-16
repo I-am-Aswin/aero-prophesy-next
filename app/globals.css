@@ -40,4 +40,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .fade {
+    animation: fadeIn 2s ease-in-out;
+  }
 }
