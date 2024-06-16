@@ -4,19 +4,29 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 180, 212, 255;
+  --background-end-rgb: 238, 245, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 0, 51, 119;
+    --background-end-rgb: 133, 169, 220;
   }
 }
 
+@font-face {
+  font-family: 'MouldyCheese';
+  src: url('/fonts/MouldyCheese.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
+  height: 100vh;
+  overflow-y: scroll;
+  /* font-family: 'MouldyCheese', sans-serif; */
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
